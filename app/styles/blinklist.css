@@ -1,0 +1,90 @@
+.header-banner{
+  background-color: #f0f2ef;
+  height: 60px;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+@media screen and (max-width: 350px) {
+  .header-logo{
+    height: 40px;
+  }
+  .header-text{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .login-button-header{
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 351px) and (max-width: 750px) {
+  .header-logo{
+    height: 40px
+  }
+  .header-text{
+    height: 40px
+  }
+}
+
+
+@media screen and (min-width: 751px) {
+  .header-logo{
+    padding-left: 100px;
+    height: 40px
+  }
+  .header-text{
+    height: 40px
+  }
+}
+
+@media screen and (min-width: 251px) {
+  .login-button-header {
+    display: inline-block;
+    float: right;
+    padding: 10px 100px 0 0;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .login-button-container {
+    margin-left: -28px;
+
+  }
+}
+
+@media screen and (max-width: 519px) {
+  .login-button-container {
+    padding: 5% 0 0 30%;
+
+  }
+}
+
+@media screen and (min-width: 520px) {
+  .login-button-container {
+    padding: 25% 0 0 45%;
+
+  }
+}
+
+
+.login-button {
+  background-color: #1bc47d;
+  border-color: transparent;
+  background-clip: border-box;
+  color: black;
+  text-align: center;
+  width: 120px;
+  margin: auto;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: green;
+}

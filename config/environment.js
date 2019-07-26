@@ -2,6 +2,10 @@
 
 module.exports = function(environment) {
   let ENV = {
+    port: 'https://',
+    domain: 'ancient-springs-73658.herokuapp.com',
+    rootURL: '/',
+    host: 'https://ancient-springs-73658.herokuapp.com',
     modulePrefix: 'blinklist',
     environment,
     rootURL: '/',

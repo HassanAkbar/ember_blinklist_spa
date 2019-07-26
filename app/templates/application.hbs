@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="header-banner">
+  <span>
+    <img src="img/blinklist_icon.png" class="header-logo">
+    <img src="img/blinklist_text.png" class="header-text">
+  </span>
+  <span class="login-button-header">
+    <a href="#_" {{action 'auth'}}>
+          Log in
+    </a>
+  </span>
 
+  {{yield}}
+</div>
+<div class="login-button-container">
+  <button class="login-button" {{action 'auth'}}>Log in</button>
+</div>
+<EmberNotify messageStyle='bootstrap' @closeAfter={{400000000000000}} />
 {{outlet}}

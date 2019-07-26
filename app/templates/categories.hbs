@@ -1,0 +1,11 @@
+ <ul>
+  {{#each model as |category|}}
+    {{category.title}}
+  {{else}}
+    <li class="item-content">
+      <div class="item-inner">
+        <div class="item-title">Nothing found</div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
