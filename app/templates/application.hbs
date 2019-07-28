@@ -1,18 +1,26 @@
 <div class="header-banner">
   <span>
-    <img src="img/blinklist_icon.png" class="header-logo">
-    <img src="img/blinklist_text.png" class="header-text">
+    <img src="/img/blinklist_icon.png" class="header-logo">
+    <img src="/img/blinklist_text.png" class="header-text">
   </span>
   <span class="login-button-header">
-    <a href="#_" {{action 'auth'}}>
-          Log in
-    </a>
+    {{#if user.loggedIn}}
+      {{#link-to 'categories' class="login-button-header-content"}}
+        Discover Books
+      {{/link-to}}
+    {{else}}
+      <a href="#_" {{action 'auth'}} class="login-button-header-content">
+        Log in
+      </a>
+    {{/if}}
   </span>
 
   {{yield}}
 </div>
-<div class="login-button-container">
-  <button class="login-button" {{action 'auth'}}>Log in</button>
-</div>
-<EmberNotify messageStyle='bootstrap' @closeAfter={{400000000000000}} />
+{{#unless user.loggedIn}}
+  <div class="login-button-container">
+    <button class="login-button" {{action 'auth'}}>Log in</button>
+  </div>
+{{/unless}}
+<EmberNotify messageStyle='bootstrap' @closeAfter={{4000}} />
 {{outlet}}
