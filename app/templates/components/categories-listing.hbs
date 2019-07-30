@@ -1,0 +1,13 @@
+<div class="categories-container">
+  {{#each categories as |category|}}
+    <div class="item-inner">
+      {{#link-to "category" category.id class="category-item-title"}}
+        {{category.title}}
+      {{/link-to}}
+    </div>
+  {{else}}
+    <div class="category-item-title">
+      <div class="item-title">Nothing found</div>
+    </div>
+  {{/each}}
+</div>

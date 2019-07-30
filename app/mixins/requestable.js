@@ -1,5 +1,6 @@
 import Mixin from '@ember/object/mixin';
 import Config from '../config/environment';
+import $ from 'jquery'
 import { inject as service } from '@ember/service';
 
 export default Mixin.create(Config, {
@@ -18,7 +19,7 @@ export default Mixin.create(Config, {
   },
 
   ajax: function(path, requestType) {
-    return Ember.$.ajax({
+    return $.ajax({
       url: `${Config.host}/${path}`,
       type: requestType
     });

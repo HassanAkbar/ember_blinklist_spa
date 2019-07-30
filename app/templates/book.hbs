@@ -1,0 +1,15 @@
+<div>
+  <h1 class="book-title">{{model.title}}</h1>
+  <div>
+    <p class="book-content">
+      {{model.firstHalfContent}}
+    </p>
+    <p class="book-content">
+      <span class={{if user.freeUser "book-second-half-content" ""}}>{{model.secondHalfContent}}</span>
+      <span subscribe-button>
+        <a class="subscribe-button">Subscribe To Read</a>
+      </span>
+      <span class={{if user.freeUser "book-second-half-content" ""}}>{{model.thirdHalfContent}}</span>
+    </p>
+  </div>
+</div>

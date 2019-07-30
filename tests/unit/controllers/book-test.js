@@ -1,15 +1,15 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
 
-module('Unit | Controller | application', function(hooks) {
+module('Unit | Controller | book', function(hooks) {
   setupTest(hooks);
 
   test('it exists', function(assert) {
-    let controller = this.owner.lookup('controller:application');
+    let controller = this.owner.lookup('controller:book');
     assert.ok(controller);
   });
 
-  test('user service exists exists', function(assert) {
+  test('user service exists', function(assert) {
     let controller = this.owner.lookup('controller:book');
     assert.ok(controller.user);
     assert.equal(controller.user.userId, null);

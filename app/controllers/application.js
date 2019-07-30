@@ -19,7 +19,7 @@ export default Controller.extend(Requestable, {
           }
       }).catch(function(error) {
         this.set('user.userId', null);
-        this.failure('Something wrong happened. Please try again later');
+        this.failure(`Something wrong happened Error Message: ${error}. Please try again later`);
       });
     },
 
@@ -35,7 +35,7 @@ export default Controller.extend(Requestable, {
             this.failure("Unable to fetch user details at the moment. Please try again later");
           }
       }).catch(function(error) {
-        this.failure("Something wrong happened. Please try again later");
+        this.failure(`Something wrong happened Error Message: ${error}. Please try again later`);
       });
     }
   }

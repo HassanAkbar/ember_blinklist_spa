@@ -1,0 +1,21 @@
+<div class="books-container">
+  {{#each books as |book|}}
+    <div class="book-inner">
+      {{#link-to "book" book.id class="book-item-title"}}
+        <span>
+          <img src={{book.image_url}} class="book-thumbnail" alt="Book">
+        </span>
+        <div class="book-name">
+          {{book.title}}
+        </div>
+        <div class="book-name book-read">
+          Read
+        </div>
+      {{/link-to}}
+    </div>
+  {{else}}
+    <div class="book-item-title">
+      <div class="item-title">Nothing found</div>
+    </div>
+  {{/each}}
+</div>
